@@ -1,0 +1,260 @@
+:root {
+  --bg: #0f1724;
+  --muted: #9ca3af;
+  --accent: #16a34a;
+  font-family: 'Quantico', system-ui, sans-serif;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  background: var(--bg);
+  color: #e6eef8;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+/* -----------------------------------
+   Header & Navigation
+----------------------------------- */
+header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem 2rem; 
+  background: rgba(0,0,0,0.2); 
+  position: sticky; 
+  top: 0; 
+  z-index: 100;
+}
+
+.logo img { 
+  width: 80px; 
+  height: auto; 
+  border-radius: 8px; 
+}
+
+nav a { 
+  color: var(--muted); 
+  text-decoration: none; 
+  margin: 0 0.5rem; 
+  padding: 0.5rem 1rem; 
+  border-radius: 8px; 
+  font-size: 1.1rem; 
+}
+
+nav a:hover,
+nav a.active { 
+  color: #fff; 
+  background: rgba(255,255,255,0.1); 
+}
+
+.menu-btn { 
+  display: none; 
+  background: none; 
+  border: none; 
+  font-size: 2rem; 
+  color: inherit; 
+}
+
+/* -----------------------------------
+   Hero Section
+----------------------------------- */
+.hero { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 2rem; 
+  max-width: 1100px; 
+  margin: 2rem auto; 
+}
+
+.photo { 
+  flex: 1 1 250px; 
+  text-align: center; 
+  margin-bottom: 1rem; 
+}
+
+.hero-img { 
+  width: 100%; 
+  max-width: 300px; 
+  border-radius: 12px; 
+}
+
+.hero-content { 
+  flex: 1 1 300px; 
+  padding: 0 1rem; 
+}
+
+.hero-content h1 { 
+  font-size: 3rem; 
+  margin-bottom: 0.5rem; 
+}
+
+.hero-content h1 span { 
+  color: var(--accent); 
+}
+
+.hero-content h3 { 
+  font-size: 1.8rem; 
+  color: var(--muted); 
+  margin-bottom: 1rem; 
+}
+
+.btn-primary { 
+  display: inline-block; 
+  margin-top: 1rem; 
+  padding: 0.8rem 1.2rem; 
+  border-radius: 10px; 
+  background: var(--accent); 
+  color: #061018; 
+  font-weight: 700; 
+  text-decoration: none; 
+  font-size: 1.2rem; 
+}
+
+/* -----------------------------------
+   Sections
+----------------------------------- */
+section { 
+  padding: 6rem 2rem; 
+  max-width: 1100px; 
+  margin: 4rem auto; 
+  font-size: 1.2rem; 
+}
+
+.muted-text { 
+  color: var(--muted); 
+}
+
+/* -----------------------------------
+   Skills
+----------------------------------- */
+.skill { margin-bottom: 1.5rem; }
+
+.skill p { 
+  margin-bottom: 0.3rem; 
+  font-weight: bold; 
+  font-size: 1.2rem; 
+}
+
+.skill-bar { 
+  width: 100%; 
+  background: #1e293b; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  height: 25px; 
+}
+
+.skill-fill { 
+  height: 100%; 
+  background: var(--accent); 
+  text-align: right; 
+  padding-right: 10px; 
+  color: #fff; 
+  line-height: 25px; 
+  border-radius: 10px; 
+  font-size: 1rem; 
+}
+
+/* -----------------------------------
+   Projects
+----------------------------------- */
+.project-card { 
+  background: rgba(255,255,255,0.05); 
+  padding: 1.5rem; 
+  margin-bottom: 1.5rem; 
+  border-radius: 12px; 
+  transition: transform 0.2s; 
+}
+
+.project-card:hover { 
+  transform: scale(1.02); 
+}
+
+/* -----------------------------------
+   Contact
+----------------------------------- */
+.contact-links { 
+  display: flex; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.contact-links a { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  background: linear-gradient(135deg, #16a34a, #22c55e); 
+  padding: 0.8rem 1.5rem; 
+  border-radius: 12px; 
+  color: #fff; 
+  font-weight: bold; 
+  text-decoration: none; 
+  font-size: 1.2rem; 
+  transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.contact-links a:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3); 
+}
+
+.location-btn { 
+  padding: 0.5rem 1rem; 
+  font-size: 1rem; 
+  background: linear-gradient(135deg, #10b981, #22c55e); 
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+footer { 
+  text-align: center; 
+  padding: 2rem 1rem; 
+  color: var(--muted); 
+  font-size: 1rem; 
+}
+
+/* -----------------------------------
+   Responsive (Mobile)
+----------------------------------- */
+@media(max-width: 768px) {
+
+  .hero { 
+    flex-direction: column; 
+  }
+
+  /* Show menu button */
+  .menu-btn { 
+    display: block; 
+  }
+
+  /* Hide nav menu by default */
+  nav { 
+    display: none; 
+    flex-direction: column; 
+    background: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(6px); 
+    position: absolute; 
+    top: 70px; 
+    right: 20px; 
+    padding: 1rem; 
+    border-radius: 12px; 
+  }
+
+  /* Class to open mobile menu */
+  nav.open { 
+    display: flex; 
+  }
+
+  nav a { 
+    margin: 0.5rem 0; 
+  }
+}

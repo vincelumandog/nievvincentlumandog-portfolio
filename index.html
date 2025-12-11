@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niev Vincent C. Lumandog Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="logo"><img src="images/istockphoto-858209386-612x612.jpg" alt="logo"></div>
+  <nav id="nav">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="photo">
+      <img src="images/niev.jpg" alt="Niev Vincent C. Lumandog" class="hero-img">
+    </div>
+    <div class="hero-content">
+      <h1>Hi, I’m <span>Niev Vincent C. Lumandog</span></h1>
+      <h3 class="typings-text">Future <span>Ethical Hacker</span></h3>
+      <p>I’m a Computer Science student at Caraga State University, passionate about cybersecurity. I am motivated to understand digital threats, secure systems, and help make online spaces safer.</p>
+    
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p class="muted-text">I’m Niev Vincent C. Lumandog, a Computer Science student at Caraga State University. I am passionate about cybersecurity and committed to building a solid foundation in ethical hacking, network security, and digital protection. My goal is to become a skilled ethical hacker and help create safer digital environments for everyone.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Future Projects</h2>
+    <div class="project-card">
+      <h3>Secure Login & Registration System</h3>
+      <p>Web app with user authentication. Tech: HTML, CSS, JS, PHP/Python</p>
+    </div>
+    <div class="project-card">
+      <h3>Web Firewall Simulator</h3>
+      <p>Simulates firewall rules for web traffic. Tech: HTML, JS, Python/Flask</p>
+    </div>
+    <div class="project-card">
+      <h3>Hardware Keylogger (Safe Version)</h3>
+      <p>Educational project to understand keylogger functionality.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <p>Python</p>
+      <div class="skill-bar"><div class="skill-fill" style="width: 50%;">50%</div></div>
+    </div>
+    <div class="skill">
+      <p>Computer Hardware</p>
+      <div class="skill-bar"><div class="skill-fill" style="width: 60%;">60%</div></div>
+    </div>
+    <div class="skill">
+      <p>Web Development (HTML/CSS)</p>
+      <div class="skill-bar"><div class="skill-fill" style="width: 70%;">70%</div></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <a href="https://www.facebook.com/cniev.lumandog" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://github.com/vincelumandog" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:vincelumandog@gmail.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="#" class="location-btn">
+        <i class="fas fa-map-marker-alt"></i> Butuan City, Philippines
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <small>&copy; <span id="year"></span> Niev Vincent C. Lumandog — Aspiring Cybersecurity Expert</small>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn = document.getElementById('menuBtn');
+  menuBtn.addEventListener('click', ()=>{
+    const nav = document.getElementById('nav');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
